@@ -132,8 +132,56 @@ class Final_Output{
             case 40:
                 areaOfSquare();
                 break;
+            case 41:
+                areaOfRectangle();
+                break;
+            case 42:
+                palindromeCheck();
+                break;
+            case 43:
+                spacedNumber();
+                break;
+            case 44:
+                computeTax();
+                break;
+            case 45:
+                amountToWords();
+                break;
+            case 46:
+                reverseInput();
+                break;
+            case 47:
+                fibonacciSequence();
+                break;
+            case 48:
+                compoundInterest();
+                break;
+            case 49:
+                analyzeIntegers();
+                break;
+            case 50:
+                calculateCallCost();
+                break;
+            case 51:
+                taxiFare();
+                break;
+            case 52:
+                validateCode();
+                break;
+            case 53:
+                aviationScoring();
+                break;
+            case 54:
+                exponentialCalculation();
+                break;
+            case 55:
+                printPattern();
+                break;
+            case 56:
+                bombsCount();
+                break;
             default:
-                System.out.println("Invalid number. Please enter a number between 1 and 10.");
+                System.out.println("Invalid number. Please enter a number between 1 and 56.");
         }
         input.close();
     }
@@ -864,5 +912,277 @@ class Final_Output{
 
     public static float getAreaOfSquare(float side) {
         return side * side;
+    }
+
+    // 41. Area of Rectangle
+    public static void areaOfRectangle() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input length: ");
+        float length = input.nextFloat();
+        System.out.print("Input width: ");
+        float width = input.nextFloat();
+        float area = getArea(length, width);
+        System.out.println("The area is: " + area);
+    }
+
+    public static float getArea(float length, float width) {
+        return length * width;
+    }
+
+    // 42. Palindrome check
+    public static void palindromeCheck() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a five digit integer: ");
+        int num = input.nextInt();
+        if (num >= 10000 && num <= 99999) {
+            if (isPalindrome(num)) {
+                System.out.println("PALINDROME");
+            } else {
+                System.out.println("NOT PALINDROME");
+            }
+        } else {
+            System.out.println("ONLY FIVE DIGIT");
+        }
+    }
+
+    public static boolean isPalindrome(int num) {
+        int original = num;
+        int reverse = 0;
+        while (num != 0) {
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
+        }
+        return original == reverse;
+    }
+
+    // 43. Spaced Number
+    public static void spacedNumber() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input four digit integer: ");
+        int num = input.nextInt();
+        String spaced = String.valueOf(num).replaceAll("(\\d)", "$1 ");
+        System.out.println(spaced.trim());
+    }
+
+    // 44. Compute Tax
+    public static void computeTax() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input gross salary: ");
+        double salary = input.nextDouble();
+        double tax = calculateTax(salary);
+        System.out.println("Tax due: " + tax);
+    }
+
+    public static double calculateTax(double salary) {
+        if (salary <= 50000) {
+            return salary * 0.1;
+        } else if (salary <= 100000) {
+            return 5000 + (salary - 50000) * 0.15;
+        } else if (salary <= 200000) {
+            return 15000 + (salary - 100000) * 0.2;
+        } else {
+            return salary * 0.25;
+        }
+    }
+
+    // 45. Amount to Words
+    public static void amountToWords() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int num = input.nextInt();
+        System.out.println("Amount in words: " + convertToWords(num));
+    }
+
+    public static String convertToWords(int num) {
+        // Add logic to convert numbers to words
+        // For simplicity, assume a number within 10 digits for this example
+        // Implement conversion logic as per the requirement
+        return "Converted Words"; // Placeholder
+    }
+
+    // 46. Reverse Input
+    public static void reverseInput() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter lines of text. Type 'tiuq' to exit.");
+        String line;
+        while (!(line = input.nextLine()).equals("tiuq")) {
+            System.out.println(new StringBuilder(line).reverse().toString());
+        }
+    }
+
+    // 47. Fibonacci Sequence
+    public static void fibonacciSequence() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a positive integer N: ");
+        int N = input.nextInt();
+        printFibonacci(N);
+    }
+
+    public static void printFibonacci(int N) {
+        int a = 0, b = 1;
+        for (int i = 0; i < N; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        System.out.println();
+    }
+
+    // 48. Compound Interest
+    public static void compoundInterest() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the principal amount: ");
+        double principal = input.nextDouble();
+        System.out.print("Enter the number of years: ");
+        int years = input.nextInt();
+        double amount = principal * Math.pow(1.1, years);
+        System.out.println("Amount after " + years + " years: " + amount);
+    }
+
+    // 49. Analyze 10 Integers
+    public static void analyzeIntegers() {
+        Scanner input = new Scanner(System.in);
+        int[] numbers = new int[10];
+        int total = 0, largest = Integer.MIN_VALUE, smallest = Integer.MAX_VALUE;
+        int posTotal = 0, negTotal = 0, negCount = 0, between50And100Count = 0;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter integer " + (i + 1) + ": ");
+            numbers[i] = input.nextInt();
+            total += numbers[i];
+            if (numbers[i] > largest) largest = numbers[i];
+            if (numbers[i] < smallest) smallest = numbers[i];
+            if (numbers[i] > 0) posTotal += numbers[i];
+            if (numbers[i] < 0) {
+                negTotal += numbers[i];
+                negCount++;
+            }
+            if (numbers[i] >= 50 && numbers[i] <= 100) between50And100Count++;
+        }
+
+        System.out.println("Total: " + total);
+        System.out.println("Largest: " + largest);
+        System.out.println("Smallest: " + smallest);
+        System.out.println("Total of positive numbers: " + posTotal);
+        System.out.println("Total of negative numbers: " + negTotal);
+        System.out.println("Count of negative numbers: " + negCount);
+        System.out.println("Count of numbers between 50 and 100: " + between50And100Count);
+    }
+
+    // 50. Call Cost Calculator
+    public static void calculateCallCost() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter destination code (1-4): ");
+        int destination = input.nextInt();
+        System.out.print("Enter time code (1 for daytime, 2 for nighttime): ");
+        int time = input.nextInt();
+        System.out.print("Enter duration (minutes): ");
+        int duration = input.nextInt();
+        double cost = calculateCallCost(destination, time, duration);
+        System.out.println("Total cost: P" + cost);
+    }
+
+    public static double calculateCallCost(int destination, int time, int duration) {
+        double rate = 0;
+
+        switch (destination) {
+            case 1: rate = (time == 1) ? 50 : 45; break;
+            case 2: rate = (time == 1) ? 30 : 27; break;
+            case 3: rate = (time == 1) ? 40 : 36; break;
+            case 4: rate = (time == 1) ? 35 : 30; break;
+            default: return 0; // Invalid destination
+        }
+
+        return (duration / 3.0) * rate;
+    }
+
+    // 51. Taxi Fare
+    public static void taxiFare() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter distance (in meters): ");
+        int distance = input.nextInt();
+        double fare = 20 + (Math.max(0, distance - 300) / 200) * 2;
+        System.out.println("Fare: P" + fare);
+    }
+
+    // 52. Code Validator
+    public static void validateCode() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter code: ");
+        String code = input.nextLine();
+
+        if (code.length() <= 5 && code.startsWith("*") && code.matches(".*\\d.*") && Character.isLetter(code.charAt(code.length() - 1))) {
+            System.out.println("Valid code");
+        } else {
+            System.out.println("Invalid code");
+        }
+    }
+
+    // 53. Aviation Scoring System
+    public static void aviationScoring() {
+        Scanner input = new Scanner(System.in);
+        double[] scores = new double[10];
+        System.out.println("Please enter 10 scores: ");
+        for (int i = 0; i < 10; i++) {
+            scores[i] = input.nextDouble();
+        }
+
+        double finalScore = calculateAviationScore(scores);
+        System.out.println("The final score is: " + finalScore);
+    }
+
+    public static double calculateAviationScore(double[] scores) {
+        double max = Double.MIN_VALUE, min = Double.MAX_VALUE, total = 0;
+
+        for (double score : scores) {
+            if (score > max) max = score;
+            if (score < min) min = score;
+            total += score;
+        }
+
+        total -= (max + min);
+        return total / 8;
+    }
+
+    // 54. Exponential Calculation
+    public static void exponentialCalculation() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter base: ");
+        int base = input.nextInt();
+        System.out.print("Enter exponent: ");
+        int exponent = input.nextInt();
+        System.out.println("Result: " + Math.pow(base, exponent));
+    }
+
+    // 55. Number Pattern
+    public static void printPattern() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input number: ");
+        int num = input.nextInt();
+
+        for (int i = 1; i <= num; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+
+    // 56. Bombs Count
+    public static void bombsCount() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input number: ");
+        String num = input.nextLine();
+
+        int bombs = 0;
+        for (char c : num.toCharArray()) {
+            if ("0675".indexOf(c) != -1) {
+                bombs += 1;
+            } else if ("21".indexOf(c) != -1) {
+                bombs += 2;
+            }
+        }
+        System.out.println(bombs + " bombs");
     }
 }

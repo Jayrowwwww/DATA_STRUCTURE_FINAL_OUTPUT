@@ -8,182 +8,183 @@ class Final_Output{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int number = input.nextInt();
+		while(true){
+			System.out.print("Enter a number: ");
+			int number = input.nextInt();
 
-        switch(number){
-            case 1:
-                printPersonalInfo();
-                break;
-            case 2:
-                rectangleAreaPerimeter();
-                break;  
-            case 3:
-                computeSalary();
-                break;  
-            case 4:
-                maxOfThree();
-                break;
-            case 5:
-                distanceBetweenPoints();
-                break;  
-            case 6:
-                breakIntoNotes();
-                break;
-            case 7:
-                convertSeconds();
-                break;  
-            case 8:
-                monthFromNumber();
-                break;
-            case 9:
-                countPosNeg();
-                break;
-            case 10:
-                passwordChecker();
-                break;
-            case 11:
-                findQuadrant();
-                break;  
-            case 12:
-                divideNumbers();
-                break;
-            case 13:
-                printNumbersInLines();
-                break; 
-            case 14:
-                averageMarks();
-                break;
-            case 15:
-                smallestInArray();
-                break;
-            case 16:
-                cmToInches();
-                break;
-            case 17:
-                reverseNumber();
-                break;
-            case 18:
-                absoluteValue();
-                break;
-            case 19:
-                checkMultiple();
-                break;
-            case 20:
-                printWordsSeparately();
-                break;
-            case 21:
-                convertCurrency();
-                break;
-            case 22:
-                thirdAngleOfTriangle();
-                break;
-            case 23:
-                checkVowelOrConsonant();
-                break;
-            case 24:
-                digitToWord();
-                break;  
-            case 25:
-                guessNumber();
-                break;
-            case 26:
-                usernameValidator();
-                break;
-            case 27:
-                factorialCalculator();
-                break;  
-            case 28:
-                multiplicationTable();  
-                break;
-            case 29:
-                fizzBuzz();
-                break;
-            case 30:
-                findLongestWord();  
-                break;
-            case 31:
-                findMaxMin();
-                break;
-            case 32:
-                separateOddEven();
-                break;
-            case 33:
-                sortAscending();
-                break;
-            case 34:
-                sortDescending();
-                break;
-            case 35:
-                secondLargest();
-                break;
-            case 36:
-                checkEvenOdd();
-                break;
-            case 37:
-                decimalToBinary();
-                break;
-            case 38:
-                checkLeapYear();
-                break;
-            case 39:
-                areaOfCircle();
-                break;
-            case 40:
-                areaOfSquare();
-                break;
-            case 41:
-                areaOfRectangle();
-                break;
-            case 42:
-                palindromeCheck();
-                break;
-            case 43:
-                spacedNumber();
-                break;
-            case 44:
-                computeTax();
-                break;
-            case 45:
-                amountToWords();
-                break;
-            case 46:
-                reverseInput();
-                break;
-            case 47:
-                fibonacciSequence();
-                break;
-            case 48:
-                compoundInterest();
-                break;
-            case 49:
-                analyzeIntegers();
-                break;
-            case 50:
-                calculateCallCost();
-                break;
-            case 51:
-                taxiFare();
-                break;
-            case 52:
-                validateCode();
-                break;
-            case 53:
-                aviationScoring();
-                break;
-            case 54:
-                exponentialCalculation();
-                break;
-            case 55:
-                printPattern();
-                break;
-            case 56:
-                bombsCount();
-                break;
-            default:
-                System.out.println("Invalid number. Please enter a number between 1 and 56.");
-        }
-        input.close();
+			switch(number){
+				case 1:
+					printPersonalInfo();
+					break;
+				case 2:
+					rectangleAreaPerimeter();
+					break;
+				case 3:
+					computeSalary();
+					break;
+				case 4:
+					maxOfThree();
+					break;
+				case 5:
+					distanceBetweenPoints();
+					break;
+				case 6:
+					breakIntoNotes();
+					break;
+				case 7:
+					convertSeconds();
+					break;
+				case 8:
+					monthFromNumber();
+					break;
+				case 9:
+					countPosNeg();
+					break;
+				case 10:
+					passwordChecker();
+					break;
+				case 11:
+					findQuadrant();
+					break;
+				case 12:
+					divideNumbers();
+					break;
+				case 13:
+					printNumbersInLines();
+					break;
+				case 14:
+					averageMarks();
+					break;
+				case 15:
+					smallestInArray();
+					break;
+				case 16:
+					cmToInches();
+					break;
+				case 17:
+					reverseNumber();
+					break;
+				case 18:
+					absoluteValue();
+					break;
+				case 19:
+					checkMultiple();
+					break;
+				case 20:
+					printWordsSeparately();
+					break;
+				case 21:
+					convertCurrency();
+					break;
+				case 22:
+					thirdAngleOfTriangle();
+					break;
+				case 23:
+					checkVowelOrConsonant();
+					break;
+				case 24:
+					digitToWord();
+					break;
+				case 25:
+					guessNumber();
+					break;
+				case 26:
+					usernameValidator();
+					break;
+				case 27:
+					factorialCalculator();
+					break;
+				case 28:
+					multiplicationTable();
+					break;
+				case 29:
+					fizzBuzz();
+					break;
+				case 30:
+					findLongestWord();
+					break;
+				case 31:
+					findMaxMin();
+					break;
+				case 32:
+					separateOddEven();
+					break;
+				case 33:
+					sortAscending();
+					break;
+				case 34:
+					sortDescending();
+					break;
+				case 35:
+					secondLargest();
+					break;
+				case 36:
+					checkEvenOdd();
+					break;
+				case 37:
+					decimalToBinary();
+					break;
+				case 38:
+					checkLeapYear();
+					break;
+				case 39:
+					areaOfCircle();
+					break;
+				case 40:
+					areaOfSquare();
+					break;
+				case 41:
+					areaOfRectangle();
+					break;
+				case 42:
+					palindromeCheck();
+					break;
+				case 43:
+					spacedNumber();
+					break;
+				case 44:
+					computeTax();
+					break;
+				case 45:
+					amountToWords();
+					break;
+				case 46:
+					reverseInput();
+					break;
+				case 47:
+					fibonacciSequence();
+					break;
+				case 48:
+					compoundInterest();
+					break;
+				case 49:
+					analyzeIntegers();
+					break;
+				case 50:
+					calculateCallCost();
+					break;
+				case 51:
+					taxiFare();
+					break;
+				case 52:
+					validateCode();
+					break;
+				case 53:
+					aviationScoring();
+					break;
+				case 54:
+					exponentialCalculation();
+					break;
+				case 55:
+					printPattern();
+					break;
+				case 56:
+					bombsCount();
+					break;
+				default:
+					System.out.println("Invalid number. Please enter a number between 1 and 56.");
+			}
+		}
     }
 
     public static void printPersonalInfo() {
@@ -218,8 +219,6 @@ class Final_Output{
 
         System.out.println("Employees ID = " + empID);
         System.out.printf("Salary = U$ %.2f%n", salary);
-
-        input.close();
     }
 
     // 4. Find maximum of three integers
@@ -234,8 +233,6 @@ class Final_Output{
 
         int max = Math.max(a, Math.max(b, c));
         System.out.println("Maximum value of three integers: " + max);
-
-        input.close();
     }
 
     // 5. Distance between two points
@@ -252,8 +249,6 @@ class Final_Output{
 
         double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         System.out.printf("Distance between the said points: %.4f%n", distance);
-
-        input.close();
     }
 
     // 6. Break amount into smallest bank notes
@@ -269,8 +264,6 @@ class Final_Output{
             amount %= note;
             System.out.println(count + " Note(s) of " + note + ".00");
         }
-
-        input.close();
     }
 
     // 7. Convert seconds to H:M:S
@@ -285,8 +278,6 @@ class Final_Output{
 
         System.out.println("There are:");
         System.out.println("H:M:S - " + hours + ":" + minutes + ":" + seconds);
-
-        input.close();
     }
 
     // 8. Print month name from number
@@ -303,7 +294,6 @@ class Final_Output{
         } else {
             System.out.println("Invalid month number.");
         }
-        input.close();
     }
 
     // 9. Count positive and negative numbers
@@ -322,7 +312,6 @@ class Final_Output{
 
         System.out.println("Number of positive numbers: " + pos);
         System.out.println("Number of negative numbers: " + neg);
-        input.close();
     }
 
     // 10. Password validation loop
@@ -341,7 +330,6 @@ class Final_Output{
                 System.out.println("Incorrect password");
             }
         }
-        input.close();
     }
 
     // 11. Find the quadrant of a point
@@ -367,8 +355,6 @@ class Final_Output{
         } else {
             System.out.println("On X-axis");
         }
-
-        input.close();
     }
 
     // 12. Divide two numbers with validation
@@ -384,8 +370,6 @@ class Final_Output{
         } else {
             System.out.println(x / y);
         }
-
-        input.close();
     }
 
     // 13. Print numbers 3 per line up to n lines
@@ -400,8 +384,6 @@ class Final_Output{
             System.out.print(num++ + " ");
             System.out.println(num++);
         }
-
-        input.close();
     }
 
     // 14. Average mathematics marks
@@ -424,7 +406,6 @@ class Final_Output{
             System.out.println("No valid marks entered.");
         }
 
-        input.close();
     }
 
     // 15. Find smallest value and its position in an array
@@ -452,7 +433,6 @@ class Final_Output{
         System.out.println("Smallest Value: " + min);
         System.out.println("Position of the element: " + position);
 
-        input.close();
     }
 
     // 16. Convert cm to inches
@@ -464,7 +444,6 @@ class Final_Output{
 
         System.out.printf("Distance of %.2f cms is = %.2f inches%n", cm, inches);
 
-        input.close();
     }
 
     // 17. Reverse a number
@@ -485,7 +464,6 @@ class Final_Output{
         System.out.println("The original number = " + original);
         System.out.println("The reverse of the said number = " + reversed);
 
-        input.close();
     }
 
     // 18. Remove negative sign (absolute value)
@@ -499,7 +477,7 @@ class Final_Output{
         System.out.println("Original value = " + value);
         System.out.println("Absolute value = " + abs);
 
-        input.close();
+
     }
 
     // 19. Check if one number is multiple of another
@@ -516,7 +494,7 @@ class Final_Output{
             System.out.println(a + " is not a multiple of " + b + ".");
         }
 
-        input.close();
+
     }
 
     // 20. Print each word on a new line
@@ -531,7 +509,7 @@ class Final_Output{
             System.out.println(word);
         }
 
-        input.close();
+
     }
 
     // 21. Convert currency value to notes and coins
@@ -561,7 +539,7 @@ class Final_Output{
                 System.out.println("." + coin + " number of Coin(s): " + count);
         }
 
-        input.close();
+
     }
 
     // 22. Find third angle of a triangle
@@ -574,7 +552,7 @@ class Final_Output{
         int angle3 = 180 - (angle1 + angle2);
         System.out.println("Third angle of the triangle : " + angle3);
 
-        input.close();
+
     }
 
     // 23. Check if alphabet is vowel or consonant
@@ -590,8 +568,8 @@ class Final_Output{
         } else {
             System.out.println("Not a valid letter.");
         }
-        
-        input.close();
+
+
     }
 
     // 24. Digit to word
@@ -607,7 +585,7 @@ class Final_Output{
             System.out.println("Not a valid single digit.");
         }
 
-        input.close();
+
     }
 
     // 25. Guess the number game
@@ -628,7 +606,7 @@ class Final_Output{
             }
         }
 
-        input.close();
+
     }
 
     // 26. Prompt for valid username
@@ -643,7 +621,7 @@ class Final_Output{
 
         System.out.println("Valid username entered: " + username);
 
-        input.close();
+
     }
 
     // 27. Factorial using while loop
@@ -662,7 +640,7 @@ class Final_Output{
 
         System.out.println("Factorial of " + n + " = " + factorial);
 
-        input.close();
+
     }
 
     // 28. Multiplication table up to 10
@@ -676,8 +654,6 @@ class Final_Output{
             System.out.println(n + " x " + i + " = " + (n * i));
             i++;
         }
-
-        input.close();
     }
 
     // 29. FizzBuzz from 1 to 100
@@ -711,8 +687,6 @@ class Final_Output{
 
         System.out.println("Longest word: " + longest);
         System.out.println("Length: " + longest.length());
-
-        input.close();
     }
 
     // 31. Find max and min in array
